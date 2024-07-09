@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es-col">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <title>Encriptar y Desencriptar</title>
+    <link rel="stylesheet" a href="./css/reset.css">
+    <link rel="stylesheet" a href="./css/style.css">
+    <script type="text/javascript" src="./js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="./images/alura-logo.png" alt="alura logo" id="alura-logo">
+    </header>
+
+    <main>
+        <section class="write-text__container">
+            <!-- input type txt -->
+            <textarea name="result" class="textarea1" id="encryptedText" placeholder="Escribe tu Texto Aquí"></textarea>
+
+            <div class="info">
+                <img src="./images/warn.png" alt="warn" id="warn">
+                <p id="only-lowercase">Sólo letras minúsculas y sin acentos..</p>
+            </div>
+
+            <div class="buttons__container">
+                <button type="button" id="btnEncrypted">Encriptar</button>
+                <button type="button" id="btnDecrypted">Desencriptar</button>
+                <button type="button" id="btnCopy">Copiar</button>
+            </div>
+        </section>
+
+
+        <section class="container__results">
+            <div class="container__img">
+                <img src="./images/Muñeco.png"  alt="persona buscando algo" class="doll">
+            </div>
+
+            <div class="main-text">
+                <h3>No se encontró ningún mensaje</h3>
+            </div>
+            <div class="paragraph">
+                <p>Escribe el texto que necesitas para Encriptar o Desencriptar</p>
+            </div>
+            <textarea name="result2" class="textarea2" id="decryptedText" placeholder="El resultado es..."></textarea>
+    </main>
+
+    <footer>
+        🔹Por Alura ORACLE ONE NEXT EDUCATION & Danny Acevedo.🔹
+    </footer>
+</body>
+
+    <script>
+        var btn = document.querySelector("#btnEncrypted");
+        btn.onclick = cypher;
+
+        var btn2 = document.querySelector("#btnDecrypted");
+        btn2.onclick = decipher;
+
+        var btn3 = document.querySelector("#btnCopy");
+        btn3.onclick = copy;
+    </script>
+
+</html>
